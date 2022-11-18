@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { fetchUserDetails } = require("../helper/fetch_user_details");
+const { MESSAGES } = require("../helper/messages");
 const secrete = process.env.secrete;
 
 const auth = async (req, res, next) => {
@@ -7,16 +8,16 @@ const auth = async (req, res, next) => {
   const token = req.header("x-auth-token");
   //Check if not token
   if (token == undefined) {
-    return next(Error("Auth Token passed is undefined"));
+    return next(Error(MESSAGES.AUTH_TOKEN_UNDEFINED));
   }
   if (!token) {
-    return next(Error("Auth Token is invalid"));
+    return next(Error(MESSAGES.AUTH_TOKEN_INVALID));
   }
   const decoded = jwt.verify(token, secrete);
   req.uid = decoded.uid;
   let user = await fetchUserDetails(req.uid);
   if (user.data == null) {
-    return next(Error("User Not found"));
+    return next(Error(MESSAGES.USER_NOT_FOUND));
   }
   req.user = user;
   console.log(process.platform);

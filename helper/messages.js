@@ -1,8 +1,26 @@
 const MESSAGES = {
+  PERMISSION_DENIED: "Permission Denied",
   TWEET_SUCCESS: "Tweet created successfully",
+  TWEET_NOT_FOUND: "Tweet not found",
   TITLE_BODY_MISSING: "Title or Body for the tweet is missing!",
   TWEET_FAILURE: "Unable to create the Tweet!",
   EMPTY_TWEETS: "No tweets found",
+  TWEET_UPDATE_SUCCESS: "Tweet Updated Successfully",
+  TWEET_DELETE_SUCCESS: "Tweet Deleted Successfully",
+  TWEET_DELETE_FAILURE: "Unable to delete Tweet",
+  EMAIL_NOT_VALID: "Email not valid",
+  PASSWORD_MIN_CHAR: "Password should have a minimum of 6 characters",
+  USER_CREATE_FAILURE: "Cannot create a User",
+  USER_CREATE_SUCCESS: "User Created Successfully",
+  USER_NOT_EXISTS: "User does not exist",
+  INVALID_CREDENTIALS: "Invalid Credentials",
+  USER_ID_NOT_VALID: "User ID is not Valid",
+  USER_NOT_FOUND: "User not found",
+  USER_FOUND: "User Found",
+  AUTH_TOKEN_UNDEFINED: "Auth Token passed is undefined",
+  AUTH_TOKEN_INVALID: "Auth token is invalid",
+  UNABLE_FETCH_USER: "Unable to fetch user",
+  CREATE_USER_FAILURE: "Unable to create user",
 };
 
 module.exports = { MESSAGES };

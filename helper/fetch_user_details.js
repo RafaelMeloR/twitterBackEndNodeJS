@@ -1,16 +1,18 @@
-const User = require("../models/user");
+const { fetchUser } = require("../database/auth");
+const { MESSAGES } = require("./messages");
 const { ObjectId } = require("mongoose").Types;
 
 const fetchUserDetails = async (_id) => {
   return new Promise(async (resolve, reject) => {
     if (!ObjectId.isValid(_id)) {
-      resolve({ message: "User ID is not Valid", data: null });
+      resolve({ message: MESSAGES.USER_ID_NOT_VALID, data: null });
     }
-    let user = await User.findById(_id).select("-password -__v").exec();
-    if (!user) {
-      resolve({ message: "User not found", data: null });
+    let user = await fetchUser({ _id }, {}, { select: "-password -__v" });
+    if (!user.status) {
+      resolve({ message: user.error, data: null });
     }
-    resolve({ message: "User Found", data: user });
+
+    resolve({ message: MESSAGES.USER_FOUND, data: user.data });
   });
 };
 
