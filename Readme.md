@@ -5,12 +5,11 @@
 - npm run dev (Install nodemon - npm install nodemon -g)
 - API Documentation
 - Postman collection
+  - https://drive.google.com/drive/folders/1CC7gOFPXR46-D7x7hbf0uSy7Qza1zf-f?usp=share_link
 
 # Test
 
 - run npm run test
-
-  - https://api.postman.com/collections/6244901-29c75281-7213-47f4-a73c-26e0b9ece63d?access_key=PMAT-01GJ3HNSX8BM4PTWJ0F897RPSR
 
 - Task 1 - https://github.com/centinna-l/sh-task-1
 - Task 2 - https://github.com/centinna-l/sh-task2
