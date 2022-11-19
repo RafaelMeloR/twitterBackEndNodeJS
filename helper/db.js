@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose.connect(
   process.env.MONGODB_URL,
+  // "mongodb+srv://dbUser:jerry@cluster0.lwj0c.gcp.mongodb.net/?retryWrites=true&w=majority"
   {
     useUnifiedTopology: true,
 

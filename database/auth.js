@@ -41,6 +41,7 @@ const createUser = async (user) => {
     if (!user) {
       return { status: false, error: MESSAGES.CREATE_USER_FAILURE };
     }
+    delete result["password"];
     return { status: true, data: result };
   } catch (error) {
     return { status: false, error: error.message };

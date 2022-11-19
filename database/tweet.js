@@ -73,7 +73,7 @@ const deleteTweetDB = async (tweet_id, author) => {
   try {
     let result = await Tweet.findOneAndDelete({
       _id: tweet_id,
-      author: userId,
+      author: author,
     });
     if (!result) {
       return { status: false, error: MESSAGES.TWEET_DELETE_FAILURE };
