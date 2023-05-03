@@ -1,4 +1,4 @@
-# Sheer Technologies Social Media Backend
+# Social Media Backend
 
 - git clone
 - npm install
